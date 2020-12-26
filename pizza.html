@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizza Delivery & Takeaway Near You | Pizza Hut VN </title>
-    <link data-n-head="ssr" rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;display=swap">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link data-n-head="ssr" rel="stylesheet" type="text/css"
+        href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -21,14 +23,85 @@
                 <i class='bx bxs-user-circle'></i>
                 <a href="#">Đăng nhập hoặc tạo tài khoản</a>
                 <select>
-          <option value="vn">VN</option>
-          <option value="en">EN</option>
-        </select>
+                    <option value="vn">VN</option>
+                    <option value="en">EN</option>
+                </select>
             </div>
         </div>
     </div>
-    <div class="banner">
+    <div class="banner position-relative text-center">
         <img src="./images/banner.jpg" alt="no img">
+        <div class="popup">
+            <div class="popup__tabs ">
+                <div class="popup__tab popup__tab--active" onclick="showPopup(0)">
+                    <img id="img-1" src="./images/delivery_on.png" alt="no img"> Giao hàng tận nơi
+                </div>
+                <div class="popup__tab" onclick="showPopup(1)">
+                    <img id="img-2" src="./images/Carryout_off.png" alt="no img"> Mua mang về
+                </div>
+            </div>
+            <div class="popup__search popup--active">
+                <ul>
+                    <li class="w-100">
+                        <input placeholder="Điền địa chỉ để thấy toàn bộ menu">
+                    </li>
+                    <li>
+                        <button class="btn d-flex justify-content-center align-items-center"
+                            style="background-color: #70a401; height: 100%; padding: 0 17px;"> <i
+                                class="bx bx-search"></i></button>
+                    </li>
+                </ul>
+            </div>
+            <div class="popup__search pb-4 ">
+                <div class="d-flex" style="padding-bottom: 2rem;">
+                    <select class="w-50 p-3 border-second mx-2">
+                        <option selected>Thành phố</option>
+                        <option value="1">Hà Nội</option>
+                        <option value="2">Hồ Chí Minh</option>
+                        <option value="3">Đà Nẵng</option>
+                        <option value="4">Khánh Hòa</option>
+                        <option value="4">Long An</option>
+                        <option value="4">Hải Phòng</option>
+                        <option value="4">Nam Định</option>
+                        <option value="4">Nghệ An</option>
+                        <option value="4">Cần Thơ</option>
+                        <option value="4">Bình Dương</option>
+                        <option value="4">BÌnh Thuận</option>
+                        <option value="4">Quảng Ninh</option>
+                        <option value="4">Thanh Hóa</option>
+                        <option value="4">Bà Rịa Vũng Tàu</option>
+                        <option value="4">Bắc Ninh</option>
+                        <option value="4">Cà Mau</option>
+                        <option value="4">Đăk Lăk</option>
+                        <option value="4">Đồng Nai</option>
+                        <option value="4">Bà Rịa Vũng Tàu</option>
+                        <option value="4">Bắc Ninh</option>
+                        <option value="4">Cà Mau</option>
+                        <option value="4">Đăk Lăk</option>
+                        <option value="4">Đồng Nai</option>
+
+                    </select>
+                    <select class="w-50 p-3 border-second mx-2">
+                        <option selected>Quận</option>
+                        <option value="1">Quận 1</option>
+                        <option value="2">Quận 2</option>
+                        <option value="3">Quận 3</option>
+                        <option value="1">Quận 4</option>
+                        <option value="2">Quận 5</option>
+                        <option value="3">Quận 6</option>
+                        <option value="1">Quận 7</option>
+                        <option value="2">Quận 8</option>
+                        <option value="3">Quận 9</option>
+                        <option value="1">Quận 10</option>
+                        <option value="2">Quận 11</option>
+                        <option value="3">Quận 12</option>
+                        <option value="1">Quận Thủ Đức</option>
+                        <option value="2">Quận Bình Thạnh</option>
+                        <option value="3">Quận Phú Nhuận</option>
+                    </select>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="content-title position-relative d-flex justify-content-center">
         <div class="postion-absolute line"></div>
@@ -47,8 +120,9 @@
                     <img src="./images/pazza1.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title" style="margin-bottom: 3.5rem;">Mua 1 Tặng 1 (Cỡ Vừa)</h5>
-                        <p class="box-text" style="margin-bottom: 2.5rem;">01 Pizza Cỡ Vừa 01 Coca-Cola/ Fanta/ Sprite 1.5L 01 Pizza Cỡ Vừa Miễn Phí</p>
-                        <button class="btn btn-select w-100">Chọn</button>
+                        <p class="box-text" style="margin-bottom: 2.5rem;">01 Pizza Cỡ Vừa 01 Coca-Cola/ Fanta/ Sprite
+                            1.5L 01 Pizza Cỡ Vừa Miễn Phí</p>
+                        <button class="btn btn-select w-100" onclick="showModal()">Chọn</button>
                     </div>
                 </div>
             </div>
@@ -58,7 +132,7 @@
                     <div class="card-body">
                         <h5 class="card-title mb-5">MUA 1 TẶNG 1 - PIZZA VIỀN PHÔ MAI 2 LOẠI NHÂN PHỦ (CỠ VỪA)</h5>
                         <p class="box-text my-5">Pizza Cỡ Vừa x 1 Đồ Uống (1.5L) x 1 Pizza Cỡ Vừa Miễn Phí x 1</p>
-                        <button class="btn btn-select w-100">Chọn</button>
+                        <button class="btn btn-select w-100" onclick="showModal()">Chọn</button>
                     </div>
                 </div>
             </div>
@@ -72,7 +146,9 @@
                     <img src="./images/pizza3.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title mb-5">COMBO 1+</h5>
-                        <p class="box-text" style="margin-bottom: 2.5rem;">Dành cho 1-2 người 01 Pizza trong menu chính (cỡ vừa) 01 Coca-cola/ Fanta/ Sprite 1.5L Giá: 169.000đ + Nâng cấp Viền Phô Mai/ Viền Xúc Xích (cỡ vừa): + 49.000đ</p>
+                        <p class="box-text" style="margin-bottom: 2.5rem;">Dành cho 1-2 người 01 Pizza trong menu chính
+                            (cỡ vừa) 01 Coca-cola/ Fanta/ Sprite 1.5L Giá: 169.000đ + Nâng cấp Viền Phô Mai/ Viền Xúc
+                            Xích (cỡ vừa): + 49.000đ</p>
                         <button class="btn btn-select w-100">Chọn</button>
                     </div>
                 </div>
@@ -82,7 +158,9 @@
                     <img src="./images/pizza4.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title mb-5">COMBO VUI KHOÁI CHÍ</h5>
-                        <p class="box-text">Dành cho 5 - 6 người 01 trong 13 loại Pizza Menu Chính (Cỡ Lớn) 01 Cánh Gà Chiên Xốt Trứng Muối/ Cánh Gà Xốt BBQ (4 miếng) 01 Mì Ý Thịt Bằm Xốt cà Chua/ Mì Ý Hải Sản Xốt Cà Chua 01 Khoai Tây Chiên 01 Coca/ Fanta/ Sprite 1.5L Giá:
+                        <p class="box-text">Dành cho 5 - 6 người 01 trong 13 loại Pizza Menu Chính (Cỡ Lớn) 01 Cánh Gà
+                            Chiên Xốt Trứng Muối/ Cánh Gà Xốt BBQ (4 miếng) 01 Mì Ý Thịt Bằm Xốt cà Chua/ Mì Ý Hải Sản
+                            Xốt Cà Chua 01 Khoai Tây Chiên 01 Coca/ Fanta/ Sprite 1.5L Giá:
                             559,000đ
                         </p>
                         <button class="btn btn-select w-100">Chọn</button>
@@ -154,14 +232,15 @@
                         </li>
                         <li>Số ĐKKD: 0303902751
                         </li>
-                        <li>Số 1-3-5 đường D2 Khu dân cư phức hợp sông Sài Gòn, số 92 Nguyễn Hữu Cảnh, phường 22, quận Bình Thạnh, TP. Hồ Chí Minh
+                        <li>Số 1-3-5 đường D2 Khu dân cư phức hợp sông Sài Gòn, số 92 Nguyễn Hữu Cảnh, phường 22, quận
+                            Bình Thạnh, TP. Hồ Chí Minh
                         </li>
                     </ul>
                 </div>
                 <div class="col-md-3 text-end">
                     <ul>
                         <li><a href="#">Điều khoản & Điều kiện
-                    </a>
+                            </a>
                         </li>
                         <li><img src="./images/bocongthuogn.png" alt="no img"></li>
                     </ul>
@@ -169,6 +248,83 @@
             </div>
         </div>
     </div>
+
+    <div id="modal" class="position-fixed modal-popup" style="z-index: 10;">
+        <div class="overlay"></div>
+        <div class="popup1">
+            <div class="popup__tabs ">
+                <div id="popup__tab1" class="popup__tab popup__tab--active" onclick="showPopup1(0)">
+                    <img id="img-3" src="./images/delivery_on.png" alt="no img"> Giao hàng tận nơi
+                </div>
+                <div id="popup__tab2" class="popup__tab" onclick="showPopup1(1)">
+                    <img id="img-4" src="./images/Carryout_off.png" alt="no img"> Mua mang về
+                <span class="close d-flex justify-content-center align-items-center" onclick="hideModal()"><i class='bx bx-x bx-rotate-180' style="color: black; font-size: 2rem;"></i></span>
+                </div>
+            </div>
+            <div id="popup__search1"  class="popup__search popup--active">
+                <ul>
+                    <li class="w-100">
+                        <input placeholder="Điền địa chỉ để thấy toàn bộ menu">
+                    </li>
+                    <li>
+                        <button class="btn d-flex justify-content-center align-items-center"
+                            style="background-color: #70a401; height: 100%; padding: 0 17px;"> <i
+                                class="bx bx-search"></i></button>
+                    </li>
+                </ul>
+            </div>
+            <div id="popup__search2"class="popup__search pb-4 ">
+                <div class="d-flex" style="padding-bottom: 2rem;">
+                    <select class="w-50 p-3 border-second mx-2">
+                        <option selected>Thành phố</option>
+                        <option value="1">Hà Nội</option>
+                        <option value="2">Hồ Chí Minh</option>
+                        <option value="3">Đà Nẵng</option>
+                        <option value="4">Khánh Hòa</option>
+                        <option value="4">Long An</option>
+                        <option value="4">Hải Phòng</option>
+                        <option value="4">Nam Định</option>
+                        <option value="4">Nghệ An</option>
+                        <option value="4">Cần Thơ</option>
+                        <option value="4">Bình Dương</option>
+                        <option value="4">BÌnh Thuận</option>
+                        <option value="4">Quảng Ninh</option>
+                        <option value="4">Thanh Hóa</option>
+                        <option value="4">Bà Rịa Vũng Tàu</option>
+                        <option value="4">Bắc Ninh</option>
+                        <option value="4">Cà Mau</option>
+                        <option value="4">Đăk Lăk</option>
+                        <option value="4">Đồng Nai</option>
+                        <option value="4">Bà Rịa Vũng Tàu</option>
+                        <option value="4">Bắc Ninh</option>
+                        <option value="4">Cà Mau</option>
+                        <option value="4">Đăk Lăk</option>
+                        <option value="4">Đồng Nai</option>
+
+                    </select>
+                    <select class="w-50 p-3 border-second mx-2">
+                        <option selected>Quận</option>
+                        <option value="1">Quận 1</option>
+                        <option value="2">Quận 2</option>
+                        <option value="3">Quận 3</option>
+                        <option value="1">Quận 4</option>
+                        <option value="2">Quận 5</option>
+                        <option value="3">Quận 6</option>
+                        <option value="1">Quận 7</option>
+                        <option value="2">Quận 8</option>
+                        <option value="3">Quận 9</option>
+                        <option value="1">Quận 10</option>
+                        <option value="2">Quận 11</option>
+                        <option value="3">Quận 12</option>
+                        <option value="1">Quận Thủ Đức</option>
+                        <option value="2">Quận Bình Thạnh</option>
+                        <option value="3">Quận Phú Nhuận</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- js -->
     <script>
@@ -189,6 +345,68 @@
                 tabs[selectedTab].classList.add('tab--active');
             }
         }
+
+        var selectedPopup = 0;
+        var popups = document.querySelectorAll('.popup__search');
+        var popupTabs = document.querySelectorAll('.popup__tab');
+        function showPopup(id) {
+            if (id === 0) {
+                document.getElementById('img-1').src = location.origin + '/images/delivery_on.png';
+                document.getElementById('img-2').src = location.origin + '/images/Carryout_off.png';
+            } 
+            if (id === 1) {
+                document.getElementById('img-1').src = location.origin + '/images/delivery_off.png';
+                document.getElementById('img-2').src = location.origin + '/images/Carryout_on.png';
+            }
+            if (id === selectedPopup) {
+                return;
+            }
+            popups[id].classList.add('popup--active');
+            popupTabs[id].classList.add('popup__tab--active');
+            popups[selectedPopup].classList.remove('popup--active');
+            popupTabs[selectedPopup].classList.remove('popup__tab--active');
+            selectedPopup = id;
+        }
+
+
+
+        var selectedPopup1 = 0; 
+        function showPopup1(id) {
+            if (id === 0) {
+                document.getElementById('img-3').src = location.origin + '/images/delivery_on.png';
+                document.getElementById('img-4').src = location.origin + '/images/Carryout_off.png';
+                if(id!==selectedPopup1){
+                    document.getElementById('popup__tab1').classList.add('popup__tab--active');
+                    document.getElementById('popup__tab2').classList.remove('popup__tab--active');
+                    document.getElementById('popup__search1').classList.add('popup--active');
+                    document.getElementById('popup__search2').classList.remove('popup--active');
+                    selectedPopup1 = 0;
+                }
+            } 
+            if (id === 1) {
+                document.getElementById('img-3').src = location.origin + '/images/delivery_off.png';
+                document.getElementById('img-4').src = location.origin + '/images/Carryout_on.png';
+                if(id!==selectedPopup1){
+                    document.getElementById('popup__tab2').classList.add('popup__tab--active');
+                    document.getElementById('popup__tab1').classList.remove('popup__tab--active');
+                    document.getElementById('popup__search2').classList.add('popup--active');
+                    document.getElementById('popup__search1').classList.remove('popup--active');
+                    selectedPopup1 = 1;
+                }
+            }
+          
+        }
+
+        function hideModal(){
+            console.log(document.getElementById('modal'));
+            document.getElementById('modal').classList.remove('modal--show');
+        }
+
+        function showModal(){
+            console.log(document.getElementById('modal').classList);
+            document.getElementById('modal').classList.add('modal--show');
+        }
+
     </script>
 </body>
 
