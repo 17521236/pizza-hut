@@ -5,10 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizza Delivery & Takeaway Near You | Pizza Hut VN </title>
-    <link data-n-head="ssr" rel="stylesheet" type="text/css"
-        href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;display=swap">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link data-n-head="ssr" rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -21,8 +19,11 @@
             </div>
             <div class="header__right d-flex align-items-center">
                 <i class='bx bxs-user-circle'></i>
-                <a href="#">Đăng nhập hoặc tạo tài khoản</a>
-                <select>
+                <a class="login" href="#">Đăng nhập hoặc tạo tài khoản</a>
+                <i class='bx bx-basket'></i>
+                <h5 class="language-vi fw-bold mb-0 px-1">VI</h5>
+                <i class='bx bx-menu'></i>
+                <select class="language">
                     <option value="vn">VN</option>
                     <option value="en">EN</option>
                 </select>
@@ -46,8 +47,7 @@
                         <input placeholder="Điền địa chỉ để thấy toàn bộ menu">
                     </li>
                     <li>
-                        <button class="btn d-flex justify-content-center align-items-center"
-                            style="background-color: #70a401; height: 100%; padding: 0 17px;"> <i
+                        <button class="btn d-flex justify-content-center align-items-center" style="background-color: #70a401; height: 100%; padding: 0 17px;"> <i
                                 class="bx bx-search"></i></button>
                     </li>
                 </ul>
@@ -120,8 +120,7 @@
                     <img src="./images/pazza1.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title" style="margin-bottom: 3.5rem;">Mua 1 Tặng 1 (Cỡ Vừa)</h5>
-                        <p class="box-text" style="margin-bottom: 2.5rem;">01 Pizza Cỡ Vừa 01 Coca-Cola/ Fanta/ Sprite
-                            1.5L 01 Pizza Cỡ Vừa Miễn Phí</p>
+                        <p class="box-text" style="margin-bottom: 2.5rem;">01 Pizza Cỡ Vừa 01 Coca-Cola/ Fanta/ Sprite 1.5L 01 Pizza Cỡ Vừa Miễn Phí</p>
                         <button class="btn btn-select w-100" onclick="showModal()">Chọn</button>
                     </div>
                 </div>
@@ -146,9 +145,7 @@
                     <img src="./images/pizza3.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title mb-5">COMBO 1+</h5>
-                        <p class="box-text" style="margin-bottom: 2.5rem;">Dành cho 1-2 người 01 Pizza trong menu chính
-                            (cỡ vừa) 01 Coca-cola/ Fanta/ Sprite 1.5L Giá: 169.000đ + Nâng cấp Viền Phô Mai/ Viền Xúc
-                            Xích (cỡ vừa): + 49.000đ</p>
+                        <p class="box-text" style="margin-bottom: 2.5rem;">Dành cho 1-2 người 01 Pizza trong menu chính (cỡ vừa) 01 Coca-cola/ Fanta/ Sprite 1.5L Giá: 169.000đ + Nâng cấp Viền Phô Mai/ Viền Xúc Xích (cỡ vừa): + 49.000đ</p>
                         <button class="btn btn-select w-100">Chọn</button>
                     </div>
                 </div>
@@ -158,9 +155,7 @@
                     <img src="./images/pizza4.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title mb-5">COMBO VUI KHOÁI CHÍ</h5>
-                        <p class="box-text">Dành cho 5 - 6 người 01 trong 13 loại Pizza Menu Chính (Cỡ Lớn) 01 Cánh Gà
-                            Chiên Xốt Trứng Muối/ Cánh Gà Xốt BBQ (4 miếng) 01 Mì Ý Thịt Bằm Xốt cà Chua/ Mì Ý Hải Sản
-                            Xốt Cà Chua 01 Khoai Tây Chiên 01 Coca/ Fanta/ Sprite 1.5L Giá:
+                        <p class="box-text">Dành cho 5 - 6 người 01 trong 13 loại Pizza Menu Chính (Cỡ Lớn) 01 Cánh Gà Chiên Xốt Trứng Muối/ Cánh Gà Xốt BBQ (4 miếng) 01 Mì Ý Thịt Bằm Xốt cà Chua/ Mì Ý Hải Sản Xốt Cà Chua 01 Khoai Tây Chiên 01 Coca/ Fanta/ Sprite 1.5L Giá:
                             559,000đ
                         </p>
                         <button class="btn btn-select w-100">Chọn</button>
@@ -232,8 +227,7 @@
                         </li>
                         <li>Số ĐKKD: 0303902751
                         </li>
-                        <li>Số 1-3-5 đường D2 Khu dân cư phức hợp sông Sài Gòn, số 92 Nguyễn Hữu Cảnh, phường 22, quận
-                            Bình Thạnh, TP. Hồ Chí Minh
+                        <li>Số 1-3-5 đường D2 Khu dân cư phức hợp sông Sài Gòn, số 92 Nguyễn Hữu Cảnh, phường 22, quận Bình Thạnh, TP. Hồ Chí Minh
                         </li>
                     </ul>
                 </div>
@@ -258,22 +252,21 @@
                 </div>
                 <div id="popup__tab2" class="popup__tab" onclick="showPopup1(1)">
                     <img id="img-4" src="./images/Carryout_off.png" alt="no img"> Mua mang về
-                <span class="close d-flex justify-content-center align-items-center" onclick="hideModal()"><i class='bx bx-x bx-rotate-180' style="color: black; font-size: 2rem;"></i></span>
+                    <span class="close d-flex justify-content-center align-items-center" onclick="hideModal()"><i class='bx bx-x bx-rotate-180' style="color: black; font-size: 2rem;"></i></span>
                 </div>
             </div>
-            <div id="popup__search1"  class="popup__search popup--active">
+            <div id="popup__search1" class="popup__search popup--active">
                 <ul>
                     <li class="w-100">
                         <input placeholder="Điền địa chỉ để thấy toàn bộ menu">
                     </li>
                     <li>
-                        <button class="btn d-flex justify-content-center align-items-center"
-                            style="background-color: #70a401; height: 100%; padding: 0 17px;"> <i
+                        <button class="btn d-flex justify-content-center align-items-center" style="background-color: #70a401; height: 100%; padding: 0 17px;"> <i
                                 class="bx bx-search"></i></button>
                     </li>
                 </ul>
             </div>
-            <div id="popup__search2"class="popup__search pb-4 ">
+            <div id="popup__search2" class="popup__search pb-4 ">
                 <div class="d-flex" style="padding-bottom: 2rem;">
                     <select class="w-50 p-3 border-second mx-2">
                         <option selected>Thành phố</option>
@@ -349,14 +342,15 @@
         var selectedPopup = 0;
         var popups = document.querySelectorAll('.popup__search');
         var popupTabs = document.querySelectorAll('.popup__tab');
+
         function showPopup(id) {
             if (id === 0) {
-                document.getElementById('img-1').src = location.origin + '/images/delivery_on.png';
-                document.getElementById('img-2').src = location.origin + '/images/Carryout_off.png';
-            } 
+                document.getElementById('img-1').src = location.pathname.replace('pizza.html', '/images/delivery_on.png');
+                document.getElementById('img-2').src = location.pathname.replace('pizza.html', '/images/Carryout_off.png');
+            }
             if (id === 1) {
-                document.getElementById('img-1').src = location.origin + '/images/delivery_off.png';
-                document.getElementById('img-2').src = location.origin + '/images/Carryout_on.png';
+                document.getElementById('img-1').src = location.pathname.replace('pizza.html', '/images/delivery_off.png');
+                document.getElementById('img-2').src = location.pathname.replace('pizza.html', '/images/Carryout_on.png');
             }
             if (id === selectedPopup) {
                 return;
@@ -370,23 +364,26 @@
 
 
 
-        var selectedPopup1 = 0; 
+        var selectedPopup1 = 0;
+
         function showPopup1(id) {
+            console.log(location.origin);
+
             if (id === 0) {
-                document.getElementById('img-3').src = location.origin + '/images/delivery_on.png';
-                document.getElementById('img-4').src = location.origin + '/images/Carryout_off.png';
-                if(id!==selectedPopup1){
+                document.getElementById('img-3').src = location.pathname.replace('pizza.html', '/images/delivery_on.png');
+                document.getElementById('img-4').src = location.pathname.replace('pizza.html', '/images/Carryout_off.png');
+                if (id !== selectedPopup1) {
                     document.getElementById('popup__tab1').classList.add('popup__tab--active');
                     document.getElementById('popup__tab2').classList.remove('popup__tab--active');
                     document.getElementById('popup__search1').classList.add('popup--active');
                     document.getElementById('popup__search2').classList.remove('popup--active');
                     selectedPopup1 = 0;
                 }
-            } 
+            }
             if (id === 1) {
-                document.getElementById('img-3').src = location.origin + '/images/delivery_off.png';
-                document.getElementById('img-4').src = location.origin + '/images/Carryout_on.png';
-                if(id!==selectedPopup1){
+                document.getElementById('img-3').src = location.pathname.replace('pizza.html', '/images/delivery_off.png');
+                document.getElementById('img-4').src = location.pathname.replace('pizza.html', '/images/Carryout_on.png');
+                if (id !== selectedPopup1) {
                     document.getElementById('popup__tab2').classList.add('popup__tab--active');
                     document.getElementById('popup__tab1').classList.remove('popup__tab--active');
                     document.getElementById('popup__search2').classList.add('popup--active');
@@ -394,19 +391,18 @@
                     selectedPopup1 = 1;
                 }
             }
-          
+
         }
 
-        function hideModal(){
+        function hideModal() {
             console.log(document.getElementById('modal'));
             document.getElementById('modal').classList.remove('modal--show');
         }
 
-        function showModal(){
+        function showModal() {
             console.log(document.getElementById('modal').classList);
             document.getElementById('modal').classList.add('modal--show');
         }
-
     </script>
 </body>
 
